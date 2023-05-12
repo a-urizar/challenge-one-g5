@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/anime/style_usina.css"> <!-- Archivo de estilo de Animación -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    
+    <title>Encriptador</title>
+    
+
+</head>
+<body>
+    <header>
+        <img class="logo" src="./imagenes/Frame 6.png" alt="Logo de Alura" >
+    </header>
+    <main>
+        
+        <section>
+         <textarea class="text-area"  id="text-area"  rows="10" cols="30" placeholder="Ingrese el texto aqui"></textarea>
+            <div>
+            <h6 class="informacion" id="informacion">Solo letras minusculas y sin acento</h6>
+        </div>
+            <!-- ANIMACION DE MENSAJE DE ESPERA -->
+        <div class="div_usina" id="div_usina">
+            <section>
+                <p class="text_usina"  id="div_usina"><br>
+                Encriptando su mensaje ... Por favor Aguarde un instante</p>
+            </section>
+            </div>
+
+            <!--  BOTON ENCRIPTAR -  tiene un delay  de 12 seg  solo a modo decorativo  para darle tiempo a 
+            la animacion del mensaje de espera -->
+
+        <div class="botones">
+            <button class="btn-encriptar" onclick="setTimeout(btnEncriptar, 12000); myFunction(); setTimeout(vuelveTextArea,12000);">Encriptar</button>
+
+            <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+        </div>
+        </section>
+        <section>
+            <!-- BOTON COPIAR -  llama a la funcion copiar encargada de copiar en el portapapeles lo que se
+            encuen tra en el textArea mensaje  -->
+            <textarea class="mensaje" id="mensaje" cols="20" rows="10"></textarea>
+            <div class="boton-copiar">
+                <button class="copiar" id="copiar" onclick="copiar()">Copiar</button>
+            </div>
+        
+        </section>
+        <!-- BOTON VER BACKEND - Solo muestra una gif animado -->
+        <div>
+            <button class="backend" id="backend" onclick="verBackend()">Ver Backend</button>
+        </div>
+        
+    </main>
+        
+        <script src="/anime/anime.min.js"></script> <!-- Archivo necesario para que funcione animación -->
+        <script src="/anime/script_usina.js" ></script>
+        <script src="/script.js"></script>
+</body>
+</html>
