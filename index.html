@@ -21,10 +21,10 @@
     <header>
         <img class="logo" src="imagenes/Frame 6.png" alt="Logo de Alura" >
     </header>
-    <main>
+    <main  class="flex-container">
         
         <section>
-         <textarea class="text-area"  id="text-area"  rows="10" cols="30" placeholder="Ingrese el texto aqui"></textarea>
+         <textarea class="text-area"  id="text-area"  rows="5" cols="30" placeholder="Ingrese el texto aqui"></textarea>
             <div>
             <h6 class="informacion" id="informacion">Solo letras minusculas y sin acento</h6>
         </div>
@@ -44,6 +44,12 @@
 
             <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
         </div>
+        <!-- BOTON VER BACKEND - Solo muestra una gif animado -->
+        
+        <div>
+            <button class="backend" id="backend" onclick="verBackend()">Ver Backend</button>
+        </div>
+
         </section>
         <section>
             <!-- BOTON COPIAR -  llama a la funcion copiar encargada de copiar en el portapapeles lo que se
@@ -54,10 +60,7 @@
             </div>
         
         </section>
-        <!-- BOTON VER BACKEND - Solo muestra una gif animado -->
-        <div>
-            <button class="backend" id="backend" onclick="verBackend()">Ver Backend</button>
-        </div>
+        
         
     </main>
         
