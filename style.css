@@ -94,6 +94,8 @@
         margin-top: 20px;
         padding-left: 20px;
         position: relative; /* Cambia aquí */
+        flex-basis: 100%;
+    
     }
    
    
@@ -118,7 +120,8 @@
     }
    
    .mensaje{
-       background: white;
+    flex: basis 100px; ;   
+    background: white;
        background-image: url("./imagenes/Muñeco.png");
        background-repeat: no-repeat;
        background-size: 100%;
