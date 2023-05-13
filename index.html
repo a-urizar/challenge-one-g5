@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/anime/style_usina.css"> <!-- Archivo de estilo de Animación -->
-=======
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="anime/style_usina.css"> <!-- Archivo de estilo de Animación -->
->>>>>>> fd63d31bf37e3022a417c11fc20ca38801d86117
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -26,10 +21,10 @@
     <header>
         <img class="logo" src="imagenes/Frame 6.png" alt="Logo de Alura" >
     </header>
-    <main>
+    <main  class="flex-container">
         
         <section>
-         <textarea class="text-area"  id="text-area"  rows="10" cols="30" placeholder="Ingrese el texto aqui"></textarea>
+         <textarea class="text-area"  id="text-area"  rows="5" cols="30" placeholder="Ingrese el texto aqui"></textarea>
             <div>
             <h6 class="informacion" id="informacion">Solo letras minusculas y sin acento</h6>
         </div>
@@ -49,6 +44,12 @@
 
             <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
         </div>
+        <!-- BOTON VER BACKEND - Solo muestra una gif animado -->
+        
+        <div>
+            <button class="backend" id="backend" onclick="verBackend()">Ver Backend</button>
+        </div>
+
         </section>
         <section>
             <!-- BOTON COPIAR -  llama a la funcion copiar encargada de copiar en el portapapeles lo que se
@@ -59,21 +60,12 @@
             </div>
         
         </section>
-        <!-- BOTON VER BACKEND - Solo muestra una gif animado -->
-        <div>
-            <button class="backend" id="backend" onclick="verBackend()">Ver Backend</button>
-        </div>
+        
         
     </main>
         
-<<<<<<< HEAD
-        <script src="/anime/anime.min.js"></script> <!-- Archivo necesario para que funcione animación -->
-        <script src="/anime/script_usina.js" ></script>
-        <script src="/script.js"></script>
-=======
         <script src="anime/anime.min.js"></script> <!-- Archivo necesario para que funcione animación -->
         <script src="anime/script_usina.js" ></script>
         <script src="script.js"></script>
->>>>>>> fd63d31bf37e3022a417c11fc20ca38801d86117
 </body>
 </html>
