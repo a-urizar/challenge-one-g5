@@ -82,6 +82,7 @@
            flex-basis: calc(100% - 20px);
        }
        .mensaje{
+        flex-direction: column;
         background: white;
         background-image: url("./imagenes/Muñeco.png");
         background-repeat: no-repeat;
