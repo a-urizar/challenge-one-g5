@@ -101,7 +101,7 @@ function copiar(){
 function verBackend() {
     var uno = document.getElementById('backend');
     if (uno.innerHTML == 'Ver Backend') { // se fija si el texto del boton esta en (Ver Backend) 
-    mensaje.style.backgroundImage="url('/imagenes/gato.gif')"; // pone la imagen del gato   
+    mensaje.style.backgroundImage="url('imagenes/gato.gif')"; // pone la imagen del gato   
     uno.innerHTML = 'Ocultar Backend';} //habilita la posibilidad de sacar la imagen en el mismo boton
         
     
@@ -114,7 +114,7 @@ function verBackend() {
     function automatizar() {
             var dos = document.getElementById('automatiza');
             if (dos.innerHTML == 'Automatizar') { // se fija si el texto del boton esta en (Ver Backend) 
-            mensaje.style.backgroundImage="url('/imagenes/computer-drinking.gif')"; // pone la imagen del gato   
+            mensaje.style.backgroundImage="url('imagenes/computer-drinking.gif')"; // pone la imagen del gato   
             dos.innerHTML = 'Manual';} //habilita la posibilidad de sacar la imagen en el mismo boton
                 
             
