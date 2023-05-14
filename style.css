@@ -191,7 +191,7 @@ flex-basis:328px;
 .mensaje{
     flex: basis 100px; ;   
     background: white;
-       background-image: url("/imagenes/Muñeco.png");
+       background-image: url("imagenes/Muñeco.png");
        background-repeat: no-repeat;
        background-size: 100%;
        border: none;
