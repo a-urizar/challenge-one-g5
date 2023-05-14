@@ -13,10 +13,17 @@ La letra "u" es convertida para "ufat"
     window.onload = function() {
             let uno = document.getElementById('backend');
             uno.innerHTML = 'Ver Backend'; /* Pone al Boton VER BACKEND  en su estado inicial(VER BACKEND)*/
-           document.getElementById("div_usina").style.display="none"; /* Oculta de entrada la animación*/
-                  
-    }
+            
+        }
 
+    window.onload = function() {
+        
+        document.getElementById("seccion2").style.display="none";
+        document.getElementById('backend').innerHTML="Ver Backend";
+        document.getElementById("video2").style.display="none";
+      }
+
+      
 
         /* ENCRIPTACION */
 
@@ -94,22 +101,36 @@ function copiar(){
 function verBackend() {
     var uno = document.getElementById('backend');
     if (uno.innerHTML == 'Ver Backend') { // se fija si el texto del boton esta en (Ver Backend) 
-    mensaje.style.backgroundImage="url('./imagenes/gato.gif')"; // pone la imagen del gato   
+    mensaje.style.backgroundImage="url('/imagenes/gato.gif')"; // pone la imagen del gato   
     uno.innerHTML = 'Ocultar Backend';} //habilita la posibilidad de sacar la imagen en el mismo boton
         
+    
     
     else {uno.innerHTML = 'Ver Backend';   // en caso contrario quita la imagen  y habilita el boton para Ver la imagen
          mensaje.style.backgroundImage="none";}
   
         }
 
+    function automatizar() {
+            var dos = document.getElementById('automatiza');
+            if (dos.innerHTML == 'Automatizar') { // se fija si el texto del boton esta en (Ver Backend) 
+            mensaje.style.backgroundImage="url('/imagenes/computer-drinking.gif')"; // pone la imagen del gato   
+            dos.innerHTML = 'Manual';} //habilita la posibilidad de sacar la imagen en el mismo boton
+                
+            
+            
+            else {dos.innerHTML = 'Automatizar';   // en caso contrario quita la imagen  y habilita el boton para Ver la imagen
+                 mensaje.style.backgroundImage="none";}
+          
+                }    
+
 
         let uno = document.getElementById('backend');
         uno.innerHTML = 'Ocultar Backend';
   
         function myFunction() {
-            var x = document.getElementById("div_usina");
-            var y = document.getElementById("text-area");
+            var x = document.getElementById("seccion2");
+            var y = document.getElementById("seccion1");
             var  z = document.getElementById("informacion");
             
 
@@ -131,12 +152,12 @@ function verBackend() {
         
 
         function mostrar(valor){
-            document.getElementById("div_usina").innerHTML=valor;
+            document.getElementById("seccion2").innerHTML=valor;
         } 
 
         function vuelveTextArea(){  // cuando termina la animacion , se muestra el texto encriptado   se oculta la animacion
-            var x = document.getElementById("div_usina"); // y se vuleve a mostrar  textArea e informacion
-            var y = document.getElementById("text-area");
+            var x = document.getElementById("seccion2"); // y se vuleve a mostrar  textArea e informacion
+            var y = document.getElementById("seccion1");
             var  z = document.getElementById("informacion");
             
             x.style.display = "none";
@@ -144,3 +165,64 @@ function verBackend() {
             z.style.display = "block";
      
         }
+
+        function advertencia(){
+            document.getElementById("boton-panico").style.display="none";
+            document.getElementById("info-panico").style.display="none";
+            document.getElementById("atencion").style.display="block";
+            document.getElementById("luz-roja").style.display="block";
+            document.getElementById("boton-naranja").style.display="block";
+            document.getElementById("hombre-boton").style.display="block";
+            document.getElementById("video2").style.display="none";
+        }
+        function muestraVideo(){
+            document.getElementById("atencion").style.display="none";
+            document.getElementById("luz-roja").style.display="none";
+            document.getElementById("boton-naranja").style.display="none";
+            document.getElementById("hombre-boton").style.display="none";
+            document.getElementById("hombre-boton").style.display="none";
+
+            document.getElementById("logo").style.display="none";
+            document.getElementById("seccion1").style.display="none";
+            document.getElementById("seccion2").style.display="none";
+            document.getElementById("seccion3").style.display="none";
+
+            
+        
+            document.getElementById("video").style.display="block";
+            
+        }
+
+
+        function carga() { 
+            var video=document.getElementById('video'); 
+            var video2=document.getElementById('video2');
+            video.load();
+            video2.load();    
+        } 
+
+            function reproduce() { 
+                var video=document.getElementById('video'); 
+                video.play();
+                video.addEventListener('ended',reproduceFin,false);
+                
+                /*https://www.eniun.com/control-reproduccion-video-audio-javascript/*/
+
+            }
+
+    function reproduceFin() {
+        document.getElementById("video").style.display="none";  
+        document.getElementById("video2").style.display="block";
+        var video2=document.getElementById('video2'); 
+         video2.play();
+         video2.addEventListener('ended',cierra,false);
+
+    }          
+    //function pantallaNegra(){
+    //  document.body.style.backgroundColor = 'black';
+    //document.getElementById("fondo-final").style.backgroundColor="black";
+    //Window.close()}		       
+
+function cierra(){
+    Window.close();
+}

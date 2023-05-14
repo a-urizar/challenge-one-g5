@@ -17,55 +17,104 @@
     
 
 </head>
-<body>
+<body id="cuerpo">
     <header>
-        <img class="logo" src="imagenes/Frame 6.png" alt="Logo de Alura" >
+        <img class="logo" id="logo" src="imagenes/Frame 6.png" alt="Logo de Alura" >
     </header>
-    <main  class="flex-container">
-        
-        <section>
-         <textarea class="text-area"  id="text-area"  rows="5" cols="30" placeholder="Ingrese el texto aqui"></textarea>
+    <main>
+        <section id="seccion1">
+            <textarea class="text-area"  id="text-area"  rows="5" cols="30" placeholder="Ingrese el texto aqui"></textarea>
             <div>
             <h6 class="informacion" id="informacion">Solo letras minusculas y sin acento</h6>
         </div>
-            <!-- ANIMACION DE MENSAJE DE ESPERA -->
-        <div class="div_usina" id="div_usina">
-            <section>
-                <p class="text_usina"  id="div_usina"><br>
-                Encriptando su mensaje ... Por favor Aguarde un instante</p>
-            </section>
-            </div>
 
-            <!--  BOTON ENCRIPTAR -  tiene un delay  de 12 seg  solo a modo decorativo  para darle tiempo a 
+        <!--  BOTON ENCRIPTAR -  tiene un delay  de 12 seg  solo a modo decorativo  para darle tiempo a 
             la animacion del mensaje de espera -->
 
-        <div class="botones">
-            <button class="btn-encriptar" onclick="setTimeout(btnEncriptar, 12000); myFunction(); setTimeout(vuelveTextArea,12000);">Encriptar</button>
-
-            <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
-        </div>
-        <!-- BOTON VER BACKEND - Solo muestra una gif animado -->
+            <div class="botones">
+                <button class="btn-encriptar" onclick="setTimeout(btnEncriptar, 12000); myFunction(); setTimeout(vuelveTextArea,12000);">Encriptar</button>
+    
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+            <!-- BOTON VER BACKEND - Solo muestra una gif animado -->
+            
+            <div class="botones">
+                <button class="btn-backend" id="backend" onclick="verBackend()">Ver backend</button>
+    
+                <button class="btn-automatiza"  id="automatiza" onclick="automatizar()">Automatizar</button>
+                
+                
+            </div>
         
-        <div>
-            <button class="backend" id="backend" onclick="verBackend()">Ver Backend</button>
-        </div>
+            
+
+        
 
         </section>
-        <section>
-            <!-- BOTON COPIAR -  llama a la funcion copiar encargada de copiar en el portapapeles lo que se
-            encuen tra en el textArea mensaje  -->
-            <textarea class="mensaje" id="mensaje" cols="20" rows="10"></textarea>
+        <section id="seccion2">
+            <!-- ANIMACION DE MENSAJE DE ESPERA -->
+        <div class="div_usina" id="div_usina">
+            <div>
+                <p class="text_usina"  id="div_usina"><br>
+                Encriptando su mensaje ... Por favor Aguarde un instante</p>
+                </div>
+            </div>
+
+        </section>
+        <section id="seccion3">
+            <textarea class="mensaje" id="mensaje" cols="20" rows="8"></textarea>
             <div class="boton-copiar">
                 <button class="copiar" id="copiar" onclick="copiar()">Copiar</button>
             </div>
+            
         
         </section>
         
+        </section>
         
     </main>
+    <div class="borra-mensaje">
+    <section class="seccion4" id="seccion4">
+        <div class="info-mas-panico">
+           <div>
+              <p class="informacion" id="info-panico">Botón Antipánico</p>
+           </div>
         
+           <div class="panico">
+           <button>
+           <img class="boton-panico" id="boton-panico" src="imagenes/boton_panico.gif" alt="boton rojo" onclick="advertencia();carga()">
+           </button>
+           </div>
+        </div>
+    </section>
+
+<section>
+    <img class="luz-roja" id="luz-roja" src="imagenes/luz_emergencia.gif" alt="boton rojo" >
+    <p class="atencion" id="atencion">!ATENCION!  - Si oprime el boton Rojo el mensaje se autodestriuira</p>
+    <img class="hombre-boton" id="hombre-boton" src="imagenes/el-botón-rojo-risto-mejide.gif" alt="boton rojo" >
+    <button>
+     <img class="boton-naranja" id="boton-naranja" src="imagenes/boton-rojo-naranja.gif" alt="boton rojo" onclick="muestraVideo();reproduce()">
+    </button>
+</section>
+
+<section>
+    <video class="video" id="video" width="700" height="350">  
+    <source src="imagenes/agente86.mp4">
+        
+</section>
+    
+    
+<section id="fondo-final">
+        <video class="video2" id="video2" width="700" height="350">  
+        <source src="imagenes/tv.mp4"><video class="video2" id="video2" width="700" height="350">  
+        <source src="imagenes/tv.mp4">
+</section>
+
         <script src="anime/anime.min.js"></script> <!-- Archivo necesario para que funcione animación -->
         <script src="anime/script_usina.js" ></script>
         <script src="script.js"></script>
-</body>
+
+    </body>
+
+        
 </html>
